@@ -10,10 +10,10 @@
         </v-row>
       </v-container>
     </div>
-    <v-main></v-main>
-      <v-container>
-        <Nuxt />
-      </v-container>
+    <v-main>
+    <v-container>
+      <Nuxt />
+    </v-container>
     </v-main>
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
