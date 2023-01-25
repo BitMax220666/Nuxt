@@ -3,7 +3,7 @@
     <div v-if="announce" class="announce">
       <v-container>
         <v-row class="d-flex align-center justify-center">
-          <span>What makes collaboration click? A new reserch report by Figma.</span>
+          <span>What makes collaboration click? <a href="#">A new reserch report by Figma</a>.</span>
           <v-btn icon @click="closeAnnounce">
             <v-icon>mdi-close</v-icon>
           </v-btn>
@@ -11,10 +11,16 @@
       </v-container>
     </div>
     <v-main>
-    <v-container>
-      <Nuxt />
-    </v-container>
-    </v-main>
+      <v-row class="d-flex justify-space-between" style="padding: 0 30px; margin-top: 30px;">
+        <a href="/"><FigmaLogo /></a>
+        <div>
+          <a href="/pricing">
+            Pricing
+          </a>
+        </div>
+      </v-row>
+       <Nuxt />
+      </v-main>
     <v-footer app>
       <span>&copy; {{ new Date().getFullYear() }}</span>
     </v-footer>

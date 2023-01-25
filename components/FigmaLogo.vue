@@ -10,6 +10,6 @@
 
 <style>
 .figma-1p2i2oq {
-  height: 180px;
+  height: 64px;
 }
 </style>
