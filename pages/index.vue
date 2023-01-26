@@ -4,10 +4,11 @@
       <v-col align="center">
         <video aria-label="Nothing great is made alone" role="heading" aria-level="1"
           src="https://cdn.sanity.io/files/599r6htc/localized/4caa8274fa1a76f5df188b7969c41e2b00890801.mp4" autoplay=""
-          muted="" playsinline="" style="max-width: 100%;"></video>
-        <h3>Figma connects everyone in the design process so teams can deliver better products, faster.</h3>
-        <v-btn depressed color="primary">
-          Get Started
+          muted="" playsinline="" style="max-width: 90%;"></video>
+        <h3 style="font-weight: 400;">Figma connects everyone in the design process so teams can deliver better products, faster.</h3>
+        <br>
+        <v-btn color="black" class="white--text" @click="scrollToForm">
+          Sign up free
         </v-btn>
       </v-col>
     </v-container>
@@ -18,12 +19,22 @@
       <SocialCard />
     </v-container>
     <LastDivider />
+    <v-container ref="registerForm">
     <RegisterForm />
+  </v-container>
   </v-col>
 </template>
 
 <script>
 export default {
-  name: 'IndexPage'
+  name: 'IndexPage',
+  methods: {
+    scrollToForm() {
+      const el = this.$refs.registerForm;
+      if(el) {
+        el.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }
 }
 </script>
