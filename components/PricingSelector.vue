@@ -19,6 +19,7 @@ export default {
     methods: {
         onClick(type) {
             this.type = type;
+            this.$emit('selectType', this.type);
         },
     }
 }
@@ -39,9 +40,11 @@ export default {
     padding: 12px 14px;
     text-align: center;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .active {
     background-color: rgb(255, 255, 255);
+    cursor: auto;
 }
 </style>
